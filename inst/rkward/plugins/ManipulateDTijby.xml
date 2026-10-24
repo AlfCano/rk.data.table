@@ -1,0 +1,85 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="ManipulateDTijby.js" />
+	<help file="ManipulateDTijby.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<convert id="cond_select" sources="j_mode" mode="equals" standard="select" />
+		<convert id="cond_aggregate" sources="j_mode" mode="equals" standard="aggregate" />
+		<convert id="cond_update" sources="j_mode" mode="equals" standard="update" />
+		<connect governor="dt_data.available" client="dt_vs.root" />
+		<connect governor="cond_select" client="frm_select.visible" />
+		<connect governor="cond_aggregate" client="frm_aggregate.visible" />
+		<connect governor="cond_update" client="frm_update.visible" />
+	</logic>
+	<dialog label="data.table: Manipulate (i, j, by)">
+		<row id="row_vDRDRDFSFS">
+			<varselector id="dt_vs" />
+			<column id="clm_tDRDRDFSFS">
+				<tabbook>
+					<tab label="Data &amp; Rows (i)" id="tab_DataRows">
+						<column id="clm_vDFSFSFE18">
+							<varslot id="dt_data" label="Data.frame / data.table" source="dt_vs" classes="data.frame" required="true" />
+							<frame label="Filter and Sort ('i')" id="frm_FltrndSr">
+								<input label="Filter rows (Expression for 'i', e.g., age &gt; 18 &amp; sex == 'F')" id="i_filter" />
+								<varslot id="i_order" label="Sort by variable(s) (order)" source="dt_vs" multi="true" />
+								<checkbox id="i_desc" label="Sort descending (-)" value="TRUE" />
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Columns (j)" id="tab_Columnsj">
+						<column id="clm_rACKDCASUR">
+							<radio id="j_mode" label="Action for Columns ('j')">
+								<option label="Keep / Drop Columns" value="select" checked="true" />
+								<option label="Aggregate / Summarize" value="aggregate" />
+								<option label="Update by Reference (:=)" value="update" />
+							</radio>
+							<frame label="Subset Columns" id="frm_select">
+								<varslot id="j_sel_vars" label="Columns to keep" source="dt_vs" multi="true" />
+							</frame>
+							<frame label="Compute Summary" id="frm_aggregate">
+								<varslot id="j_agg_var" label="Variable to Summarize (Leave blank for row count)" source="dt_vs" />
+								<dropdown id="j_agg_stat" label="Statistic">
+									<option label="Count (.N)" value="count" checked="true" />
+									<option label="Mean" value="mean" />
+									<option label="Sum" value="sum" />
+									<option label="Median" value="median" />
+									<option label="Max" value="max" />
+									<option label="Min" value="min" />
+								</dropdown>
+							</frame>
+							<frame label="Add/Update Column (:=)" id="frm_update">
+								<input label="New or Existing Column Name" id="j_upd_col" />
+								<input label="Expression (e.g., var1 * var2 / 100)" id="j_upd_expr" />
+								<text id="txt_NtMdfsth">
+									Note: Modifies the data.table directly in memory (zero copy).
+								</text>
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Groups (by) &amp; Output" id="tab_GrpsbyOt">
+						<column id="clm_frmlGGGEES">
+							<frame label="Grouping ('by')" id="frm_Gropngby">
+								<varslot id="by_vars" label="Group by variable(s) ('by')" source="dt_vs" multi="true" />
+							</frame>
+							<frame label="Export" id="frm_Export">
+								<saveobject label="Save result as" checkable="true" checked="true" initial="res_dt" id="save_res" />
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+				</tabbook>
+			</column>
+		</row>
+		<preview label="Preview (Top 50 rows)" id="prv_PrvwTp50" mode="data" />
+	</dialog>
+</document>

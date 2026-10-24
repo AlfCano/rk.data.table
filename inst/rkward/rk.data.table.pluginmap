@@ -1,0 +1,140 @@
+<!DOCTYPE
+	rkpluginmap
+>
+<document
+	base_prefix=""
+	namespace="ManipulateDTijby"
+	id="ManipulateDTijby_rkward"
+	po_id="ManipulateDTijby_rkward"
+	priority="medium"
+>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<dependencies
+		R_min_version="4.0.0"
+	>
+		<package
+			name="data.table"
+		/>
+	</dependencies>
+	<about
+		name="rk.data.table"
+		shortinfo="A Lightning-Fast GUI for data.table: Data manipulation, reshaping, and massive file I/O"
+		longinfo="A Lightning-Fast GUI for data.table: Data manipulation, reshaping, and massive file I/O"
+		version="0.0.1"
+		releasedate="2026-10-24"
+		url="https://github.com/AlfCano/rk.data.table"
+		license="GPL (&gt;= 3)"
+	>
+		<author
+			given="Alfonso"
+			family="Cano"
+			email="alfonso.cano@correo.buap.mx"
+			role="aut, cre"
+		/>
+	</about>
+	<require
+		map="rkward::menu"
+	/>
+	<require
+		map="rkward::embedded"
+	/>
+	<components>
+		<component
+			id="cmp_ManipultDTjbyFstIOfrdfwrt"
+			label="Fast I/O (fread &amp; fwrite)"
+			type="standard"
+			file="plugins/FastIOfreadfwrite.xml"
+		>
+		</component>
+		<component
+			id="cmp_ManipulatDTjbyRshpmltdcst"
+			label="Reshape (melt &amp; dcast)"
+			type="standard"
+			file="plugins/Reshapemeltdcast.xml"
+		>
+		</component>
+		<component
+			id="cmp_ManipulateDTijbyJnsBndngs"
+			label="Joins &amp; Bindings"
+			type="standard"
+			file="plugins/JoinsBindings.xml"
+		>
+		</component>
+		<component
+			id="cmp_ManipulatDTjbyMnpltDT[jby"
+			label="Manipulate (DT[i,j,by])"
+			type="standard"
+			file="plugins/ManipulateDTijby.xml"
+		>
+		</component>
+	</components>
+	<hierarchy>
+		<menu
+			id="data"
+			label="Data"
+		>
+			<menu
+				id="data.table"
+				label="data.table"
+			>
+				<entry
+					component="cmp_ManipultDTjbyFstIOfrdfwrt"
+				/>
+			</menu>
+		</menu>
+		<menu
+			id="data"
+			label="Data"
+		>
+			<menu
+				id="data.table"
+				label="data.table"
+			>
+				<entry
+					component="cmp_ManipulatDTjbyRshpmltdcst"
+				/>
+			</menu>
+		</menu>
+		<menu
+			id="data"
+			label="Data"
+		>
+			<menu
+				id="data.table"
+				label="data.table"
+			>
+				<entry
+					component="cmp_ManipulateDTijbyJnsBndngs"
+				/>
+			</menu>
+		</menu>
+		<menu
+			id="data"
+			label="Data"
+		>
+			<menu
+				id="data.table"
+				label="data.table"
+			>
+				<entry
+					component="cmp_ManipulatDTjbyMnpltDT[jby"
+				/>
+			</menu>
+		</menu>
+	</hierarchy>
+	<!--
+		<context
+			id="x11"
+		>
+		</context>
+	-->
+	<!--
+		<context
+			id="import"
+		>
+		</context>
+	-->
+</document>

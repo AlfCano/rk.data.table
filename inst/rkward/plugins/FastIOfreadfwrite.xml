@@ -1,0 +1,53 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="FastIOfreadfwrite.js" />
+	<help file="FastIOfreadfwrite.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<convert id="cond_read" sources="io_mode.string" mode="equals" standard="read" />
+		<convert id="cond_write" sources="io_mode.string" mode="equals" standard="write" />
+		<connect governor="cond_read" client="frm_read.enabled" />
+		<connect governor="cond_write" client="fwrite_vs.enabled" />
+		<connect governor="cond_write" client="frm_write.enabled" />
+		<connect governor="fwrite_obj.available" client="fwrite_vs.root" />
+	</logic>
+	<dialog label="data.table: Fast I/O (fread &amp; fwrite)">
+		<column id="clm_rARFWWODIO">
+			<radio id="io_mode" label="Action">
+				<option label="Read File to Workspace (fread)" value="read" checked="true" />
+				<option label="Write Object to Disk (fwrite)" value="write" />
+			</radio>
+			<frame label="Import Options (fread)" id="frm_read">
+				<browser label="File to read (.csv, .txt, etc.)" type="file" id="fread_file" required="false" />
+				<dropdown id="fread_sep" label="Separator">
+					<option label="Auto-detect" value="auto" checked="true" />
+					<option label="Comma (,)" value="," />
+					<option label="Tab" value="TAB" />
+					<option label="Semicolon (;)" value=";" />
+				</dropdown>
+				<saveobject label="Save imported data as:" checkable="true" initial="imported_dt" id="fread_save" />
+			</frame>
+			<row id="row_vEODSSCTTA">
+				<varselector id="fwrite_vs" />
+				<frame label="Export Options (fwrite)" id="frm_write">
+					<varslot id="fwrite_obj" label="Data to export" source="fwrite_vs" classes="data.frame" />
+					<browser label="Save file as" type="savefile" id="fwrite_file" required="false" />
+					<dropdown id="fwrite_sep" label="Separator">
+						<option label="Comma (,)" value="," checked="true" />
+						<option label="Tab" value="TAB" />
+						<option label="Semicolon (;)" value=";" />
+					</dropdown>
+				</frame>
+			</row>
+			<preview label="Preview" id="prv_Preview" mode="data" />
+			<stretch />
+		</column>
+	</dialog>
+</document>

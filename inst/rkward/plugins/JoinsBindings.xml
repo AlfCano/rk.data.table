@@ -1,0 +1,52 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="JoinsBindings.js" />
+	<help file="JoinsBindings.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<convert id="cond_join" sources="cmb_mode.string" mode="equals" standard="join" />
+		<convert id="cond_bind" sources="cmb_mode.string" mode="equals" standard="bind" />
+		<connect governor="cond_join" client="frm_join.enabled" />
+		<connect governor="cond_bind" client="frm_bind.enabled" />
+	</logic>
+	<dialog label="data.table: Joins &amp; Bindings">
+		<row id="row_vAMJTBRMJO">
+			<varselector id="cmb_vs" />
+			<column id="clm_rAMJTBRMJO">
+				<radio id="cmb_mode" label="Action">
+					<option label="Merge / Join (Two tables)" value="join" checked="true" />
+					<option label="Bind Rows (rbindlist)" value="bind" />
+				</radio>
+				<frame label="Merge / Join Options" id="frm_join">
+					<row id="row_vrslTXLTYR">
+						<varslot id="cmb_x" label="Table X (Left)" source="cmb_vs" classes="data.frame" required="true" />
+						<varslot id="cmb_y" label="Table Y (Right)" source="cmb_vs" classes="data.frame" required="true" />
+					</row>
+					<dropdown id="cmb_join_type" label="Join Type">
+						<option label="Left Join (Keep all X)" value="left" checked="true" />
+						<option label="Right Join (Keep all Y)" value="right" />
+						<option label="Inner Join (Intersection)" value="inner" />
+						<option label="Full Outer Join (Keep all)" value="full" />
+						<option label="Anti Join (In X, not in Y)" value="anti" />
+					</dropdown>
+					<input label="Keys to join on (Leave empty to auto-detect. E.g. 'id', or c('id_x'='id_y'))" id="cmb_on" />
+				</frame>
+				<frame label="Bind Rows Options (rbindlist)" id="frm_bind">
+					<varslot id="cmb_bind_list" label="Data tables to bind" source="cmb_vs" classes="data.frame" required="true" multi="true" />
+					<checkbox id="cmb_bind_fill" label="Fill missing columns with NAs (fill = TRUE)" value="TRUE" checked="true" />
+					<input label="Create ID column (e.g., 'source_table', leave empty for none)" id="cmb_bind_idcol" />
+				</frame>
+				<saveobject label="Save combined data as:" checkable="true" checked="true" initial="res_dt" id="cmb_save" />
+				<preview label="Preview (Top 50 rows)" id="prv_PrvwTp50" mode="data" />
+				<stretch />
+			</column>
+		</row>
+	</dialog>
+</document>

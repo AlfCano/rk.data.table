@@ -1,0 +1,49 @@
+<!DOCTYPE rkhelp >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<summary>
+	</summary>
+	<usage>
+	</usage>
+	<!--
+		<section id="sct_EDITORDE" title="EDIT OR DELETE ME">
+			EDIT OR DELETE ME
+		</section>
+	-->
+	<settings>
+		<setting id="cmb_mode">
+		</setting>
+		<caption id="frm_join" />
+		<setting id="cmb_x">
+		</setting>
+		<setting id="cmb_y">
+		</setting>
+		<setting id="cmb_join_type">
+		</setting>
+		<setting id="cmb_on">
+		</setting>
+		<caption id="frm_bind" />
+		<setting id="cmb_bind_list">
+		</setting>
+		<setting id="cmb_bind_fill">
+		</setting>
+		<setting id="cmb_bind_idcol">
+		</setting>
+		<setting id="cmb_save">
+		</setting>
+	</settings>
+	<!--
+		<related>
+			<ul>
+				<li>
+					<link href="rkward://rhelp/..." />
+				</li>
+			</ul>
+		</related>
+	-->
+	<technical>
+	</technical>
+</document>

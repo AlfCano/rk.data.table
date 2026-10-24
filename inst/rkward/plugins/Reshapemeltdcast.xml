@@ -1,0 +1,56 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="Reshapemeltdcast.js" />
+	<help file="Reshapemeltdcast.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<convert id="cond_melt" sources="reshape_mode.string" mode="equals" standard="melt" />
+		<convert id="cond_dcast" sources="reshape_mode.string" mode="equals" standard="dcast" />
+		<connect governor="reshape_data.available" client="reshape_vs.root" />
+		<connect governor="cond_melt" client="frm_melt.enabled" />
+		<connect governor="cond_dcast" client="frm_dcast.enabled" />
+	</logic>
+	<dialog label="data.table: Reshape (melt &amp; dcast)">
+		<row id="row_vDRAMWLDLW">
+			<varselector id="reshape_vs" />
+			<column id="clm_vDRAMWLDLW">
+				<varslot id="reshape_data" label="Data to reshape" source="reshape_vs" classes="data.frame" required="true" />
+				<radio id="reshape_mode" label="Reshape Action">
+					<option label="Melt: Wide to Long" value="melt" checked="true" />
+					<option label="Dcast: Long to Wide" value="dcast" />
+				</radio>
+				<row id="row_fMOWLIDKMS">
+					<frame label="Melt Options (Wide to Long)" id="frm_melt">
+						<varslot id="melt_id" label="ID variables (Keep as rows)" source="reshape_vs" multi="true" />
+						<varslot id="melt_measure" label="Measure variables (Stack into columns)" source="reshape_vs" multi="true" />
+						<input label="Name for the new 'variable' column:" id="melt_varname" initial="variable" />
+						<input label="Name for the new 'value' column:" id="melt_valname" initial="value" />
+					</frame>
+					<frame label="Dcast Options (Long to Wide)" id="frm_dcast">
+						<varslot id="dcast_lhs" label="Row variables (LHS of formula)" source="reshape_vs" multi="true" />
+						<varslot id="dcast_rhs" label="Column variables (RHS of formula)" source="reshape_vs" multi="true" />
+						<varslot id="dcast_val" label="Value variable (Fill cells with)" source="reshape_vs" />
+						<dropdown id="dcast_fun" label="Aggregation function (If multiple values per cell)">
+							<option label="Default (length/count)" value="length" checked="true" />
+							<option label="Sum" value="sum" />
+							<option label="Mean" value="mean" />
+							<option label="Min" value="min" />
+							<option label="Max" value="max" />
+							<option label="Paste (collapse strings)" value="function(x) paste(x, collapse=',')" />
+						</dropdown>
+					</frame>
+				</row>
+				<saveobject label="Save reshaped data as:" checkable="true" checked="true" initial="res_dt" id="reshape_save" />
+				<preview label="Preview (Top 50 rows)" id="prv_PrvwTp50" mode="data" />
+				<stretch />
+			</column>
+		</row>
+	</dialog>
+</document>

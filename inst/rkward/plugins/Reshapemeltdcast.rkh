@@ -1,0 +1,53 @@
+<!DOCTYPE rkhelp >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<summary>
+	</summary>
+	<usage>
+	</usage>
+	<!--
+		<section id="sct_EDITORDE" title="EDIT OR DELETE ME">
+			EDIT OR DELETE ME
+		</section>
+	-->
+	<settings>
+		<setting id="reshape_data">
+		</setting>
+		<setting id="reshape_mode">
+		</setting>
+		<caption id="frm_melt" />
+		<setting id="melt_id">
+		</setting>
+		<setting id="melt_measure">
+		</setting>
+		<setting id="melt_varname">
+		</setting>
+		<setting id="melt_valname">
+		</setting>
+		<caption id="frm_dcast" />
+		<setting id="dcast_lhs">
+		</setting>
+		<setting id="dcast_rhs">
+		</setting>
+		<setting id="dcast_val">
+		</setting>
+		<setting id="dcast_fun">
+		</setting>
+		<setting id="reshape_save">
+		</setting>
+	</settings>
+	<!--
+		<related>
+			<ul>
+				<li>
+					<link href="rkward://rhelp/..." />
+				</li>
+			</ul>
+		</related>
+	-->
+	<technical>
+	</technical>
+</document>

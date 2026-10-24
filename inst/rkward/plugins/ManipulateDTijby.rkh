@@ -1,0 +1,62 @@
+<!DOCTYPE rkhelp >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<summary>
+	</summary>
+	<usage>
+	</usage>
+	<!--
+		<section id="sct_EDITORDE" title="EDIT OR DELETE ME">
+			EDIT OR DELETE ME
+		</section>
+	-->
+	<settings>
+		<caption id="tab_DataRows" />
+		<setting id="dt_data">
+		</setting>
+		<caption id="frm_FltrndSr" />
+		<setting id="i_filter">
+		</setting>
+		<setting id="i_order">
+		</setting>
+		<setting id="i_desc">
+		</setting>
+		<caption id="tab_Columnsj" />
+		<setting id="j_mode">
+		</setting>
+		<caption id="frm_select" />
+		<setting id="j_sel_vars">
+		</setting>
+		<caption id="frm_aggregate" />
+		<setting id="j_agg_var">
+		</setting>
+		<setting id="j_agg_stat">
+		</setting>
+		<caption id="frm_update" />
+		<setting id="j_upd_col">
+		</setting>
+		<setting id="j_upd_expr">
+		</setting>
+		<caption id="tab_GrpsbyOt" />
+		<caption id="frm_Gropngby" />
+		<setting id="by_vars">
+		</setting>
+		<caption id="frm_Export" />
+		<setting id="save_res">
+		</setting>
+	</settings>
+	<!--
+		<related>
+			<ul>
+				<li>
+					<link href="rkward://rhelp/..." />
+				</li>
+			</ul>
+		</related>
+	-->
+	<technical>
+	</technical>
+</document>

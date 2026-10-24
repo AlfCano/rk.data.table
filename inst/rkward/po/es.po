@@ -1,0 +1,264 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: rk.data.table 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 10:00-0600\n"
+"PO-Revision-Date: 2026-10-24 10:00-0600\n"
+"Last-Translator: Alfonso Cano <alfonso.cano@correo.buap.mx>\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Data.frame / data.table"
+msgstr "Data.frame / data.table"
+
+msgid "Filter rows (Expression for 'i', e.g., age > 18 & sex == 'F')"
+msgstr "Filtrar filas (Expresión para 'i', ej., age > 18 & sex == 'F')"
+
+msgid "Sort by variable(s) (order)"
+msgstr "Ordenar por variable(s) (order)"
+
+msgid "Sort descending (-)"
+msgstr "Orden descendente (-)"
+
+msgid "Action for Columns ('j')"
+msgstr "Acción para las Columnas ('j')"
+
+msgid "Keep / Drop Columns"
+msgstr "Mantener / Descartar columnas"
+
+msgid "Aggregate / Summarize"
+msgstr "Agregar / Resumir"
+
+msgid "Update by Reference (:=)"
+msgstr "Actualizar por Referencia (:=)"
+
+msgid "Columns to keep"
+msgstr "Columnas a mantener"
+
+msgid "Subset Columns"
+msgstr "Subconjunto de columnas"
+
+msgid "Variable to Summarize (Leave blank for row count)"
+msgstr "Variable a resumir (Dejar en blanco para recuento de filas)"
+
+msgid "Statistic"
+msgstr "Estadística"
+
+msgid "Count (.N)"
+msgstr "Recuento (.N)"
+
+msgid "Mean"
+msgstr "Media"
+
+msgid "Sum"
+msgstr "Suma"
+
+msgid "Median"
+msgstr "Mediana"
+
+msgid "Max"
+msgstr "Máximo"
+
+msgid "Min"
+msgstr "Mínimo"
+
+msgid "Compute Summary"
+msgstr "Calcular Resumen"
+
+msgid "New or Existing Column Name"
+msgstr "Nombre de columna nueva o existente"
+
+msgid "Expression (e.g., var1 * var2 / 100)"
+msgstr "Expresión (ej., var1 * var2 / 100)"
+
+msgid "Note: Modifies the data.table directly in memory (zero copy)."
+msgstr "Nota: Modifica el data.table directamente en memoria (sin copiar)."
+
+msgid "Add/Update Column (:=)"
+msgstr "Añadir/Actualizar Columna (:=)"
+
+msgid "Group by variable(s) ('by')"
+msgstr "Agrupar por variable(s) ('by')"
+
+msgid "Save result as"
+msgstr "Guardar resultado como"
+
+msgid "Filter and Sort ('i')"
+msgstr "Filtrar y Ordenar ('i')"
+
+msgid "Grouping ('by')"
+msgstr "Agrupación ('by')"
+
+msgid "Export"
+msgstr "Exportar"
+
+msgid "Data & Rows (i)"
+msgstr "Datos y Filas (i)"
+
+msgid "Columns (j)"
+msgstr "Columnas (j)"
+
+msgid "Groups (by) & Output"
+msgstr "Grupos (by) y Salida"
+
+msgid "data.table: Manipulate (i, j, by)"
+msgstr "data.table: Manipular (i, j, by)"
+
+msgid "Preview (Top 50 rows)"
+msgstr "Vista previa (Primeras 50 filas)"
+
+msgid "Action"
+msgstr "Acción"
+
+msgid "Read File to Workspace (fread)"
+msgstr "Leer archivo al espacio de trabajo (fread)"
+
+msgid "Write Object to Disk (fwrite)"
+msgstr "Escribir objeto en el disco (fwrite)"
+
+msgid "File to read (.csv, .txt, etc.)"
+msgstr "Archivo a leer (.csv, .txt, etc.)"
+
+msgid "Separator"
+msgstr "Separador"
+
+msgid "Auto-detect"
+msgstr "Detección automática"
+
+msgid "Comma (,)"
+msgstr "Coma (,)"
+
+msgid "Tab"
+msgstr "Tabulador"
+
+msgid "Semicolon (;)"
+msgstr "Punto y coma (;)"
+
+msgid "Save imported data as:"
+msgstr "Guardar datos importados como:"
+
+msgid "Import Options (fread)"
+msgstr "Opciones de importación (fread)"
+
+msgid "Data to export"
+msgstr "Datos a exportar"
+
+msgid "Save file as"
+msgstr "Guardar archivo como"
+
+msgid "Export Options (fwrite)"
+msgstr "Opciones de exportación (fwrite)"
+
+msgid "data.table: Fast I/O (fread & fwrite)"
+msgstr "data.table: E/S Rápida (fread & fwrite)"
+
+msgid "Data to reshape"
+msgstr "Datos a reestructurar"
+
+msgid "Reshape Action"
+msgstr "Acción de Reestructuración"
+
+msgid "Melt: Wide to Long"
+msgstr "Fundir (Melt): Ancho a Largo"
+
+msgid "Dcast: Long to Wide"
+msgstr "Moldear (Dcast): Largo a Ancho"
+
+msgid "ID variables (Keep as rows)"
+msgstr "Variables ID (Mantener como filas)"
+
+msgid "Measure variables (Stack into columns)"
+msgstr "Variables de Medida (Apilar en columnas)"
+
+msgid "Name for the new 'variable' column:"
+msgstr "Nombre para la nueva columna 'variable':"
+
+msgid "Name for the new 'value' column:"
+msgstr "Nombre para la nueva columna 'value':"
+
+msgid "Melt Options (Wide to Long)"
+msgstr "Opciones de Fundición (Melt)"
+
+msgid "Row variables (LHS of formula)"
+msgstr "Variables de fila (Lado izquierdo de la fórmula)"
+
+msgid "Column variables (RHS of formula)"
+msgstr "Variables de columna (Lado derecho de la fórmula)"
+
+msgid "Value variable (Fill cells with)"
+msgstr "Variable de valor (Rellenar celdas con)"
+
+msgid "Aggregation function (If multiple values per cell)"
+msgstr "Función de agregación (Si hay múltiples valores por celda)"
+
+msgid "Default (length/count)"
+msgstr "Predeterminado (longitud/recuento)"
+
+msgid "Paste (collapse strings)"
+msgstr "Pegar (colapsar cadenas)"
+
+msgid "Dcast Options (Long to Wide)"
+msgstr "Opciones de Moldeo (Dcast)"
+
+msgid "Save reshaped data as:"
+msgstr "Guardar datos reestructurados como:"
+
+msgid "data.table: Reshape (melt & dcast)"
+msgstr "data.table: Reestructurar (melt & dcast)"
+
+msgid "Merge / Join (Two tables)"
+msgstr "Fusionar / Unir (Dos tablas)"
+
+msgid "Bind Rows (rbindlist)"
+msgstr "Apilar Filas (rbindlist)"
+
+msgid "Table X (Left)"
+msgstr "Tabla X (Izquierda)"
+
+msgid "Table Y (Right)"
+msgstr "Tabla Y (Derecha)"
+
+msgid "Join Type"
+msgstr "Tipo de Unión (Join)"
+
+msgid "Left Join (Keep all X)"
+msgstr "Unión Izquierda (Mantener todo X)"
+
+msgid "Right Join (Keep all Y)"
+msgstr "Unión Derecha (Mantener todo Y)"
+
+msgid "Inner Join (Intersection)"
+msgstr "Unión Interna (Intersección)"
+
+msgid "Full Outer Join (Keep all)"
+msgstr "Unión Externa Completa (Mantener todo)"
+
+msgid "Anti Join (In X, not in Y)"
+msgstr "Anti Unión (En X, pero no en Y)"
+
+msgid "Keys to join on (Leave empty to auto-detect. E.g. 'id', or c('id_x'='id_y'))"
+msgstr "Claves para la unión (Dejar vacío para auto-detectar. Ej. 'id', o c('id_x'='id_y'))"
+
+msgid "Merge / Join Options"
+msgstr "Opciones de Fusión / Unión"
+
+msgid "Data tables to bind"
+msgstr "Tablas de datos a apilar"
+
+msgid "Fill missing columns with NAs (fill = TRUE)"
+msgstr "Rellenar columnas faltantes con NAs (fill = TRUE)"
+
+msgid "Create ID column (e.g., 'source_table', leave empty for none)"
+msgstr "Crear columna de ID (ej., 'tabla_origen', dejar vacío para omitir)"
+
+msgid "Bind Rows Options (rbindlist)"
+msgstr "Opciones de apilar filas (rbindlist)"
+
+msgid "Save combined data as:"
+msgstr "Guardar datos combinados como:"
+
+msgid "data.table: Joins & Bindings"
+msgstr "data.table: Uniones y Apilamientos"

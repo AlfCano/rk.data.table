@@ -1,0 +1,19 @@
+Package: rk.data.table
+Type: Package
+Title: A Lightning-Fast GUI for data.table: Data manipulation,
+        reshaping, and massive file I/O
+Version: 0.0.1
+Date: 2026-10-24
+Author: Alfonso Cano
+Maintainer: Alfonso Cano <alfonso.cano@correo.buap.mx>
+Depends: R (>= 4.0.0)
+Suggests: data.table
+Enhances: rkward
+Description: A Lightning-Fast GUI for data.table: Data manipulation,
+        reshaping, and massive file I/O
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyLoad: yes
+URL: https://github.com/AlfCano/rk.data.table
+Authors@R: person(given="Alfonso", family="Cano",
+        email="alfonso.cano@correo.buap.mx", role=c("aut", "cre"))
